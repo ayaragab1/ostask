@@ -1,0 +1,53 @@
+<div class="container" style="margin-top: 5%">
+
+  <form  #empForm="ngForm" novalidate  (ngSubmit)="add()" >
+    <fieldset>
+        <h3 class="info">Please Enter All Data </h3>
+        <!-- <div *ngIf="invalidregister" class="alert alert-danger"> Invalid Register try again</div> -->
+
+        <div class="form-group">
+          <input #empName="ngModel" name="empName" [(ngModel)]="addEmp.name" required class="form-control inpts"
+            placeholder="Name" type="text" />
+          <span class="spans" *ngIf="empName.errors?.required&&empName.touched">* This Field Is Required!!</span>
+        </div>
+
+        <div class="form-group">
+          <input #Code="ngModel" name="Code" [min]="0" [(ngModel)]="addEmp.code" required class="form-control inpts"
+            placeholder="Employee Code" type="number" />
+          <span class="spans" *ngIf="Code.errors?.required&&Code.touched">* This Field Is Required!!</span>
+          <span class="spans" *ngIf="Code.errors?.min">Cannot Add Negitive Numbers   </span>
+
+        </div>
+
+        <div class="form-group">
+          <input #Dob="ngModel" name="DOB" [(ngModel)]="addEmp.birthdate" required class="form-control inpts"
+            placeholder="Date of birth" type="date" />
+          <span class="spans" *ngIf="Dob.errors?.required&&Dob.touched">* This Field Is Required!!</span>
+        </div>
+
+        <input type="text" class="form-control inpts" required  [(ngModel)]="addEmp.department" #departmentt="ngModel"
+          name="department" placeholder="Department name" list="department" />
+        <datalist id="department">
+          <option *ngFor="let allData of data" [value]="allData.department">
+            {{allData.department }}
+          </option>
+        </datalist>
+        <span class="spans" *ngIf="departmentt.errors?.required&&departmentt.touched">* This Field Is Required!!</span>
+        <div>
+
+          <div class="gender">
+            <input #Gender="ngModel" name="Gender" [(ngModel)]="addEmp.gender" required class="form-check-input  "
+              placeholder="Gender" type="radio" value="Male" />
+            <label for="Male">Male</label>
+            <input #Gender="ngModel" name="Gender" [(ngModel)]="addEmp.gender" required class="form-check-input chk"
+              placeholder="Gender" type="radio" value="Female" />
+            <label for="Female">Female</label>
+          </div>
+        </div>
+        <div class="mt-3">
+          <input class="addBtn" type="submit" value="Add"  [disabled]="empForm.invalid">
+        </div>
+      </fieldset>
+</form>
+</div>
+

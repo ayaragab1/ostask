@@ -1,0 +1,37 @@
+
+
+.inpts{
+margin-top: 20px;
+margin-left: 20rem;
+box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+border: none;
+border-radius: 5px;
+height: 2.4rem;
+width: 50%;
+}
+.gender{
+  margin-top: 20px;
+  margin-left: 20rem;
+}
+.chk{
+  margin-left: 2rem;
+}
+.info{
+  text-align: center;
+  color: darkgreen;
+}
+.addBtn
+{
+margin-left:32rem; 
+border:none; 
+ background-color: goldenrod;
+ color: white;
+ width:20%;
+ height: 2.3em;
+ border-radius: 0.6rem;
+}
+.spans{
+  margin-left: 20rem;
+  color:red;
+  font-size: bolder;
+}

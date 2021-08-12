@@ -1,0 +1,30 @@
+.navbar {
+  background:white;
+  /* box-shadow: 0 4px 8px 0 #69819D; */
+
+}
+
+nav .navbar-toggler {
+  border: none;
+}
+
+.nav-item {
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+}
+
+.logo{
+  opacity: 100% !important;
+}
+
+.nav-link {
+  font-weight: bold;
+  color: 4e5f47;
+
+}
+
+.colortext{
+  color:4e5f47;
+
+}

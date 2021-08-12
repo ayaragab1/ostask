@@ -1,0 +1,42 @@
+[
+  {
+    "code":111,
+    "name":"Ahmed",
+    "birthdate":"11/1/1998",
+    "gender":"Male",
+    "department":"Marketing"
+  },
+  {
+    "code":118,
+    "name":"Ahmed",
+    "birthdate":"11/1/1998",
+    "gender":"Male",
+    "department":"R&D"
+  },
+  {
+    "code":112,
+    "name":"Momen",
+    "birthdate":"8/1/1988",
+    "gender":"Male",
+    "department":"Sales"
+  },  {
+    "code":113,
+    "name":"Aya",
+    "birthdate":"16/1/1999",
+    "gender":"Fmale",
+    "department":"IT"
+  },  {
+    "code":108,
+    "name":"Amira",
+    "birthdate":"1/1/1998",
+    "gender":"Fmale",
+    "department":"Production"
+  },  {
+    "code":100,
+    "name":"Hady",
+    "birthdate":"19/8/1993",
+    "gender":"Male",
+    "department":"Sales"
+  }
+
+]
