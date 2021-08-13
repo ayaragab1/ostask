@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import employees from '../../assets/employees.json';
+import employees from '../../assets/i18n/en.json';
 
 @Component({
   selector: 'app-all-employee',
@@ -14,8 +14,8 @@ export class AllEmployeeComponent implements OnInit {
   changBackground: boolean[] = [];
   changbcolor: boolean = false;
   checkedList: any;
-  listFilter: string[] = [];
   noEmoployee: boolean = false;
+
   constructor(private route: Router) {}
 
   // Check All Checkbox Checked
@@ -49,38 +49,35 @@ export class AllEmployeeComponent implements OnInit {
     }
   }
   searchEmp(eName: string, depName: string) {
-    this.employeesData=this.Data.slice();
-    var filtered=[];
-      debugger;
-    if (eName != null || depName != null) {
+    this.employeesData = this.Data.slice();
+    var filtered = [];
+    debugger;
+    if (eName != null && depName != null) {
       for (let i = 0; i < this.employeesData.length; i++) {
         if (
-          this.employeesData[i].name == eName &&
+          this.employeesData[i].name.toLowerCase() == eName.toLowerCase() &&
           this.employeesData[i].department == depName
         ) {
           filtered.push(this.employeesData[i]);
         }
-        else
-        {
-           if (
-             this.employeesData[i].name == eName||this.employeesData[i].department == depName
-           ) {
-            filtered.push(this.employeesData[i]);
-           }
-          //  else{
-          //   this.noEmoployee=true;
-          //   this.listFilter=this.employeesData;
-          // }
-       }
-
+      }
+    } else {
+      for (let i = 0; i < this.employeesData.length; i++) {
+        if (
+          this.employeesData[i].name.toLowerCase() == eName.toLowerCase() ||
+          this.employeesData[i].department == depName
+        ) {
+          filtered.push(this.employeesData[i]);
+        }
       }
     }
-    else{
-      this.noEmoployee=true;
-      this.listFilter=this.employeesData;
+
+    if (filtered.length==0) {
+      this.noEmoployee = true;
+      filtered = this.employeesData;
     }
-    this.listFilter=filtered;
-    this.employeesData = this.listFilter;
+    this.employeesData = filtered;
+    console.log(this.noEmoployee);
   }
 
   getall() {
@@ -88,7 +85,7 @@ export class AllEmployeeComponent implements OnInit {
   }
   ngOnInit(): void {
     this.employeesData = employees;
-    this.Data=employees
+    this.Data = employees;
     console.log(this.employeesData);
   }
 }

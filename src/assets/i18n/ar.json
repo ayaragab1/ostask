@@ -1,0 +1,36 @@
+[
+  {
+    "code":111,
+    "name":"احمجي",
+    "birthdate":"11/1/1998",
+    "gender":"ذكر",
+    "department":"تسويق"
+  },
+  {
+    "code":118,
+    "name":"احمد",
+    "birthdate":"11/1/1998",
+    "gender":"ذكر",
+    "department":"البحوث"
+  },
+  {
+    "code":112,
+    "name":"مؤمن",
+    "birthdate":"8/1/1988",
+    "gender":"ذكر",
+    "department":"المبيعات"
+  },  {
+    "code":113,
+    "name":"أيه",
+    "birthdate":"1/16/1999",
+    "gender":"انثي",
+    "department":"تكنولوجيا المعلومات"
+  },  {
+    "code":108,
+    "name":"اميره",
+    "birthdate":"1/1/1998",
+    "gender":"انثي",
+    "department":"الانتاج"
+  }
+
+]

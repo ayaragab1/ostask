@@ -29,7 +29,7 @@
           name="department" placeholder="Department name" list="department" />
         <datalist id="department">
           <option *ngFor="let allData of data" [value]="allData.department">
-            {{allData.department }}
+            {{allData.department }} 
           </option>
         </datalist>
         <span class="spans" *ngIf="departmentt.errors?.required&&departmentt.touched">* This Field Is Required!!</span>

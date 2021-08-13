@@ -22,7 +22,7 @@
   },  {
     "code":113,
     "name":"Aya",
-    "birthdate":"16/1/1999",
+    "birthdate":"1/16/1999",
     "gender":"Fmale",
     "department":"IT"
   },  {
@@ -31,12 +31,6 @@
     "birthdate":"1/1/1998",
     "gender":"Fmale",
     "department":"Production"
-  },  {
-    "code":100,
-    "name":"Hady",
-    "birthdate":"19/8/1993",
-    "gender":"Male",
-    "department":"Sales"
   }
 
 ]

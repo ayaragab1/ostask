@@ -1,3 +1,4 @@
+import { LazyLoadingModule } from './lazy-loading/lazy-loading.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,7 +10,15 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { AllEmployeeComponent } from './all-employee/all-employee.component';
 import { FormsModule } from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
+
+// AOT compilation support
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,9 +31,21 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+   TranslateModule.forRoot({
+   loader: {
+      provide: TranslateLoader,
+      useFactory: httpTranslateLoader,
+      deps: [HttpClient]
+      }
+   }),
+   LazyLoadingModule
   ],
-  providers: [],
+  providers: [
+    HttpClient
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

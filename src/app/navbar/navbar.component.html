@@ -9,11 +9,23 @@
     </ul>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
-        <li class="nav-item allInvoicePlace" routerLinkActive="active">
-          <a class="nav-link colortext "  routerLink="/add"></a>
-        </li>
+        <li class="nav-item  date" routerLinkActive="active">
+          {{dateToday |date}}
+          </li>
       </ul>
+      <a  class="usertitle" routerLinkActive="active"  id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+      aria-expanded="false">Aya Ragab</a>
+      <ul class="dropdown-menu " aria-labelledby="navbarDropdown"  >
 
+        <li routerLinkActive="active" ><a class="dropdown-item" >My Profile</a></li>
+        <li>
+          <select class="custom-select dropdown-item" (change)="changelang($event.target)">
+            <option value="en" [selected]="lang=='en'">English</option>
+            <option value="ar" [selected]="lang=='ar'">عربي</option>
+          </select>
+        </li>
+        <li routerLinkActive="active"><a class="dropdown-item" routerLink="/#" >Sign out</a></li>
+      </ul>
     </div>
 
 </div>

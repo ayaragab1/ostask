@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import employees from "../../assets/employees.json";
+import employees from "../../assets/i18n/en.json";
 import { Employee } from '../_models/employee';
+
+
+
 @Component({
   selector: 'app-add-employee',
   templateUrl: './add-employee.component.html',
@@ -12,10 +15,10 @@ addEmp:Employee=new Employee() ;
 data:any=employees;
 arr:any;
   constructor(public router : Router ,) { }
- 
+
   add(){
     this.arr= this.addEmp;
-    employees.push(this.arr);
+     employees.push(this.arr);
      this.router.navigateByUrl("/all");
   }
   ngOnInit(): void {
