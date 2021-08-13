@@ -1,15 +1,11 @@
 
-  /* section {
-    padding-top: 27px 0;
-  } */
 
   #footer {
-    background: #4e5f479d !important;
-    z-index: 1; /* Stay on top */
-   /* margin-bottom: 0% !important;
-   flex-shrink: 0; */
-   position: relative;
-    margin-top: 6.5rem;
+    background: #4e5f47 !important;
+    position:absolute;
+   bottom:0;
+   width:87.5%;
+    
 
   }
 
@@ -23,18 +19,8 @@
   .container{
     display: flex;
     flex-direction: column;
-    /* height: 100vh; */
   }
 
-  /* .content {
-    background: gray;
-    flex: 1 0 auto;
-  } */
-
-  .footer {
-    /* background: blue; */
-    /* height: 30px; */
-  }
 
 
   @media (max-width:767px) {
@@ -42,6 +28,5 @@
         padding-left: 0;
         border-left: transparent;
         padding-bottom: 0px;
-        /* margin-bottom: 10px; */
     }
   }
