@@ -25,12 +25,6 @@
     "birthdate":"1/16/1999",
     "gender":"Fmale",
     "department":"IT"
-  },  {
-    "code":108,
-    "name":"Amira",
-    "birthdate":"1/1/1998",
-    "gender":"Fmale",
-    "department":"Production"
   }
 
 ]

@@ -12,7 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 // AOT compilation support
@@ -26,7 +27,8 @@ export function httpTranslateLoader(http: HttpClient) {
     NavbarComponent,
     AddEmployeeComponent,
     AllEmployeeComponent,
-    SidebarComponent
+    SidebarComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

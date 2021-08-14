@@ -63,11 +63,17 @@ export class AllEmployeeComponent implements OnInit {
       }
     } else {
       for (let i = 0; i < this.employeesData.length; i++) {
+        if(eName!=null){
         if (
-          this.employeesData[i].name.toLowerCase() == eName.toLowerCase() ||
-          this.employeesData[i].department == depName
+          this.employeesData[i].name.toLowerCase() == eName.toLowerCase()
+
         ) {
           filtered.push(this.employeesData[i]);
+        }
+      }
+        else if(this.employeesData[i].department == depName){
+          filtered.push(this.employeesData[i]);
+
         }
       }
     }

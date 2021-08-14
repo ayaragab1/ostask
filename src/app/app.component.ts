@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  title = 'OS-Task';
+  
   constructor( private translateService:TranslateService){
-     this.translateService.addLangs(['en', 'ar'])
      this.translateService.setDefaultLang('en');
+     this.translateService.addLangs(['en', 'ar'])
      this.translateService.use(localStorage.getItem('lang') || 'en')
   }
 
-  title = 'OS-Task';
 }
